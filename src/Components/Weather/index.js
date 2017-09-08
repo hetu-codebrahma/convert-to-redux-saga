@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import Weather from './view';
-import { fetchWeatherRequest } from './actions';
+import { fetchWeather } from './actions';
 
 const mapStateToProps = state => ({
   weather: state.weather,
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchWeatherRequest: location => dispatch(fetchWeatherRequest(location)),
+  fetchWeather: location => dispatch(fetchWeather(location)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Weather);
